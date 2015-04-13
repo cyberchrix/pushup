@@ -1,0 +1,319 @@
+@import "compass";
+@import "_compass-hdpi";
+
+
+/* Bebas Neue */
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('../fonts/BebasNeue/BebasNeue.eot');
+    src: url('../fonts/BebasNeue/BebasNeue.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BebasNeue/BebasNeue.woff') format('woff'),
+    url('../fonts/BebasNeue/BebasNeue.ttf') format('truetype'),
+    url('../fonts/BebasNeue/BebasNeue.svg#BebasNeue') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
+
+@mixin smooth {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato';
+    font-weight: normal;
+    @include smooth;
+}
+
+a:active, a:focus {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    h2 {
+        text-transform: uppercase;
+        font-size: 36px;
+        color: #000;
+        font-weight: 900;
+    }
+}
+
+.section-title {
+    h3 {
+        position: relative;
+        font-weight: 700;
+        font-size: 36px;
+        color: #000000;
+        line-height: 44px;
+        text-transform: uppercase;
+    }
+    p {
+        font-style: italic;
+        font-size: 18px;
+        color: #AFAFAF;
+    }
+}
+
+a#scroll-down {
+  position:absolute;
+  left: calc(50% - 12px);
+  bottom: 20px;
+  opacity: 0;
+  -webkit-animation: bounce 2s ease infinite;
+  animation: bounce 2s ease infinite;
+}
+
+
+
+.main-menu {
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    z-index: 999;
+    opacity: 0;
+    ul {
+        li {
+            display: inline-block;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 14px;
+            a {
+                padding: 5px 10px;
+                color: #fff;
+                @include transition-property(all);
+                @include transition-duration(0.5s);
+                &:hover {
+                    text-decoration: none;
+                    background: #000;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+#top {
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-color: #99B5C2;
+    @include transition-property(all);
+    @include transition-duration(0.5s);
+    .backgrounds {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        // @include background-image-hdpi("clouds.png", "clouds@2x.png");
+        // background-repeat: no-repeat;
+        margin: 50px;
+        img {
+            position: absolute;
+            left: calc(50% - 355px);
+            bottom: -500px;
+            -webkit-transform: rotate(-45deg);
+        }
+    }
+    header {
+        position: relative;
+        margin-top: 50px;
+        h1 {
+        @include background-image-hdpi("buffer.png", "buffer@2x.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+        padding-top: 30px;
+        font-family: 'BebasNeue';
+        font-size: 40px;
+        color: #40434B;
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 72px;
+        opacity: 0;
+    }
+    }
+
+    .skills {
+        position: relative;
+        background-position: 50%;
+        height: 50px;
+        margin-top: 5px;
+        text-align:center;
+        overflow: hidden;
+        .content {
+            div {
+                span {
+                    position: relative;
+                    text-transform: uppercase;
+                    font-weight: 100;
+                    display: inline-block;
+                    font-size: 36px;
+                    color: #000;
+                    vertical-align: middle;
+                    &:first-child {
+                        opacity: 0;
+                        top: 100px;
+                    }
+                    &.storm {
+                        width: 17px;
+                        height: 0px;
+                        background: url('../images/storm.svg');
+                        background-repeat: no-repeat;
+                        text-indent: -9999px;
+                        margin-left: 5px;
+                        margin-right: 5px;
+                    }
+                    &:nth-child(3) {
+                        opacity: 0;
+                        bottom: -100px;
+                    }
+                }
+            }
+        }
+    }
+    h2 {
+        font-size: 24px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #fff;
+        letter-spacing: 0px;
+        opacity: 0;
+        overflow: hidden;
+        margin-top: 50px;
+        line-height: 20px;
+        hr {
+            width: 25px;
+            border: 10px;
+            height: 2px;
+            background-color: #40434B;
+            margin: 10px auto;
+            line-height: 20px;
+        }
+        span {
+            // font-family: 'BebasNeue';
+            letter-spacing: -2px;
+            font-weight: 900;
+            font-size: 48px;
+            bottom: -100px;
+            strong {
+                color: #40434B;
+            }
+        }
+    }
+}
+
+#services {
+    background-color: rgba(216,216,216,0.2);
+    height: 100vh;
+    header {
+        margin-bottom: 20px;
+    }
+    div {
+        h4 {
+            font-size: 18px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        &.design {
+            h4 {
+                @include background-image-hdpi("brush.png", "brush@2x.png");
+                background-repeat: no-repeat;
+                background-position: 50% 0;
+                padding-top: 60px;
+            }
+        }
+        &.development {
+            h4 {
+                @include background-image-hdpi("laptop.png", "laptop@2x.png");
+                background-repeat: no-repeat;
+                background-position: 50% 0;
+                padding-top: 60px;
+            }
+        }
+        &.ux {
+            h4 {
+                @include background-image-hdpi("monitor.png", "monitor@2x.png");
+                background-repeat: no-repeat;
+                background-position: 50% 0;
+                padding-top: 60px;
+            }
+        }
+    }
+}
+
+#about {
+    height: 100vh;
+}
+
+#get-in-touch {
+    height: 100vh;
+    .social {
+        margin-top: 20px;
+        li {
+            display: inline-block;
+            a {
+                display: block;
+                text-indent: -999px;
+                overflow: hidden;
+                margin-right: 10px;
+                opacity: 0.5;
+                @include transition-property(all);
+                @include transition-duration(0.5s);
+                &:hover {
+                    opacity: 1;
+                }
+                &.facebook {
+                    width: 14px;
+                    height: 26px;
+                    @include background-image-hdpi("facebook.png", "facebook@2x.png");
+                }
+                &.twitter {
+                    width: 34px;
+                    height: 26px;
+                    @include background-image-hdpi("twitter.png", "twitter@2x.png");
+                }
+                &.mail {
+                    width: 27px;
+                    height: 20px;
+                    @include background-image-hdpi("email.png", "email@2x.png");
+                }
+            }
+        }
+    }
+}
+
+.spinner {
+  z-index: 999;
+  position:absolute;
+  top: 5px;
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 30px;
+  background-color: #40434B;
+  -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(45deg);
+  -webkit-animation: rotateplane 1.2s infinite ease-in-out;
+  animation: rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes rotateplane {
+  0% { -webkit-transform: perspective(120px) rotate(45deg) }
+  50% { -webkit-transform: perspective(120px) rotate(45deg) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotate(45deg) rotateY(180deg)}
+}
+
+@keyframes rotateplane {
+  0% { -webkit-transform: perspective(120px) rotate(45deg) }
+  50% { -webkit-transform: perspective(120px) rotate(45deg) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotate(45deg) rotateY(180deg)}
+}
