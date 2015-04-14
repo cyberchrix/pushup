@@ -63,23 +63,27 @@ $(function()
 
     setTimeout(function() {
         move('.spinner').set('opacity',0).end();
-        move('#top header h1').set('opacity', '1').ease('in').end();
-        move('#top header p').set('opacity', '1').ease('in').end();
-        move('#top header p').set('top', 45).ease('in').end();
-        move('#top h2').set('opacity',1).delay('1s').end();
+
+        move('#top header h1').set('opacity', '1').end();
+        move('#top header p').set('opacity', '1').end();
+        move('#top header p').set('top', 45).end();
+        move('#top h2').set('opacity',1).delay('1.5s').end();
+        move('#top h2').translate(0,-10).delay('1.5s').end();
         if ($(this).width() < 767)
         {
+            move('#top header').set('background-position', '50% 0px').end();
             move('#top').set('background-position', '50% 120%').delay('1s').end();
         }
         else
         {
-            move('#top').set('background-position', '50% 100%').ease('bounce').delay('1s').end();
+            move('#top header').set('background-position', '0 5px').end();
+            move('#top').set('background-position', '50% 100%').delay('1s').end();
         }
-        // move('.backgrounds').set('opacity',1).delay('1.5s').end();
         move('.backgrounds').translate(50, 0).delay('1.5s').end();
         move('.backgrounds img').set('bottom',0).delay('1.5s').end();
         move('.backgrounds img').rotate(0).delay('1.5s').end();
         move('#scroll-down').set('opacity',1).delay('1.5s').end();
+        move('.main-menu').translate(0, 10).delay('1s').end();
         move('.main-menu').set('opacity',1).delay('1s').end();
         enable_scroll();
     }, 2000);

@@ -21,6 +21,18 @@
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
+@function get-vw($target) {
+  $vw-context: (1000*.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@mixin vw($size) {
+  font-size: get-vw($size);
+  @media #{$wide-screen} {
+    font-size: $size;
+  }
+}
+
 
 body {
     padding: 0;
@@ -76,7 +88,10 @@ a#scroll-down {
 
 .main-menu {
     opacity: 0;
+    text-align: right;
     ul {
+        padding-left: 0;
+        width: 100%;
         li {
             display: inline-block;
             text-transform: uppercase;
@@ -121,31 +136,27 @@ a#scroll-down {
     header {
         position: relative;
         overflow: hidden;
-        height: 60px;
-        h1 {
         @include background-image-hdpi("buffer.png", "buffer@2x.png");
         background-repeat: no-repeat;
-        background-position: 0% 50%;
-        padding-left : 50px;
+        background-position: 0% -50px;
+        padding-left: 50px;
+        h1 {
         font-family: 'BebasNeue';
         font-size: 48px;
         color: #40434B;
         margin-top: 0;
         margin-bottom: 0;
-        line-height: 48px;
+        line-height: 36px;
         opacity: 0;
         padding-top: 5px;
         }
         p {
-            position: absolute;
             font-size: 12px;
             font-family: 'Lato';
             font-weight: 300;
             text-transform: uppercase;
-            padding-left: 50px;
             color: #40434B;
             opacity: 0;
-            top: 60px;
         }
     }
 
@@ -189,16 +200,15 @@ a#scroll-down {
     }
     h2 {
         position: absolute;
-        left: calc(50% - 167px);
-        top: calc(50% - 90px);
-        font-size: 24px;
+        left: calc(50% - 161.5px);
+        top: calc(50% - 60px);
+        font-size: 36px;
         font-weight: 300;
         text-transform: uppercase;
         color: #fff;
         letter-spacing: 0px;
         opacity: 0;
         overflow: hidden;
-        line-height: 20px;
         text-align: center;
         hr {
             width: 25px;
@@ -209,7 +219,6 @@ a#scroll-down {
             line-height: 20px;
         }
         span {
-            // font-family: 'BebasNeue';
             letter-spacing: -2px;
             font-weight: 900;
             font-size: 48px;
