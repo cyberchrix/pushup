@@ -62,8 +62,9 @@ $(function()
     disable_scroll();
 
     setTimeout(function() {
-        move('.spinner').set('opacity',0).end();
-
+        // move('.spinner').set('width',0).end();
+        // move('.spinner').set('height',0).end();
+        move('.spinner').set('opacity',0).delay('0.5s').end();
         move('#top header h1').set('opacity', '1').end();
         move('#top header p').set('opacity', '1').end();
         move('#top header p').set('top', 45).end();
