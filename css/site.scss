@@ -199,7 +199,7 @@ a#scroll-down {
         left: calc(50% - 161.5px);
         top: calc(50% - 60px);
         font-size: 36px;
-        font-weight: 300;
+        font-weight: 100;
         text-transform: uppercase;
         color: #fff;
         letter-spacing: 0px;
@@ -216,10 +216,11 @@ a#scroll-down {
         }
         span {
             letter-spacing: -2px;
-            font-weight: 900;
+            font-weight: 100;
             font-size: 48px;
             bottom: -100px;
             strong {
+                font-weight: 100;
                 color: #40434B;
             }
         }
