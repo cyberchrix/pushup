@@ -63,12 +63,9 @@ $(function()
 
     setTimeout(function() {
         move('.spinner').set('opacity',0).end();
-        move('#top h1').set('opacity', '1').ease('in').end();
-        // move('.skills .content .storm').set('height',40).delay('0.7s').end();
-        // move('.skills .content span:first-child').set('opacity',1).delay('0.8s').end();
-        // move('.skills .content span:first-child').set('top',0).delay('0.8s').end();
-        // move('.skills .content span:nth-child(3)').set('opacity',1).delay('0.9s').end();
-        // move('.skills .content span:nth-child(3)').set('bottom',0).delay('0.9s').end();
+        move('#top header h1').set('opacity', '1').ease('in').end();
+        move('#top header p').set('opacity', '1').ease('in').end();
+        move('#top header p').set('top', 45).ease('in').end();
         move('#top h2').set('opacity',1).delay('1s').end();
         if ($(this).width() < 767)
         {

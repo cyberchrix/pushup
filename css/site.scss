@@ -103,7 +103,7 @@ a#scroll-down {
     overflow: hidden;
     position: relative;
     background-color: #99B5C2;
-    padding-top: 20px;
+    padding-top: 50px;
     @include transition-property(all);
     @include transition-duration(0.5s);
     .backgrounds {
@@ -120,6 +120,8 @@ a#scroll-down {
     }
     header {
         position: relative;
+        overflow: hidden;
+        height: 60px;
         h1 {
         @include background-image-hdpi("buffer.png", "buffer@2x.png");
         background-repeat: no-repeat;
@@ -133,6 +135,17 @@ a#scroll-down {
         line-height: 48px;
         opacity: 0;
         padding-top: 5px;
+        }
+        p {
+            position: absolute;
+            font-size: 12px;
+            font-family: 'Lato';
+            font-weight: 300;
+            text-transform: uppercase;
+            padding-left: 50px;
+            color: #40434B;
+            opacity: 0;
+            top: 60px;
         }
     }
 
@@ -175,6 +188,9 @@ a#scroll-down {
         }
     }
     h2 {
+        position: absolute;
+        left: calc(50% - 167px);
+        top: calc(50% - 90px);
         font-size: 24px;
         font-weight: 300;
         text-transform: uppercase;
@@ -182,8 +198,8 @@ a#scroll-down {
         letter-spacing: 0px;
         opacity: 0;
         overflow: hidden;
-        margin-top: 50px;
         line-height: 20px;
+        text-align: center;
         hr {
             width: 25px;
             border: 10px;
