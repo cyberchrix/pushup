@@ -122,7 +122,7 @@ a#scroll-down {
             position: absolute;
             left: calc(50% - 355px);
             bottom: -500px;
-            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
         }
     }
     header {
@@ -263,10 +263,6 @@ a#scroll-down {
             }
         }
     }
-}
-
-#about {
-    // height: 100vh;
 }
 
 #get-in-touch {
