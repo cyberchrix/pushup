@@ -1,0 +1,35 @@
+@import "compass";
+@import "_compass-hdpi";
+
+/* lg */
+@media (min-width: 1200px) {
+}
+
+/* md */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+
+/* sm */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* xs */
+@media (max-width: 767px) {
+    #top {
+        background-position: 50% 200%;
+        header {
+            background-position: 50% -100px;
+            padding-top: 50px;
+            padding-left: 0;
+            text-align: center;
+        }
+        .main-menu {
+            text-align: center;
+        }
+    }
+}
+
+/* XS Portrait */
+@media (max-width: 480px) {
+}
